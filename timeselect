@@ -1,4 +1,10 @@
 #!/bin/sh
-export TZ="$1"/"$2"
-RR=$(date)
-zenity --info --text="$RR"
+#export TZ="$1"/"$2"
+#RR=$(date)
+#zenity --info --text="$RR"
+Variable1= $(zenity --entry --entry-text="Enter Continent" --text="Enter Continent")
+Variable2= $(zenity --entry --entry-text="Enter Region" --text="Enter Region")
+export TZ="$Variable1"/"$Variable2"
+Display=$(date)
+zenity --info --text="$Display"
+
