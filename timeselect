@@ -1,1 +1,4 @@
-qwq
+#!/bin/sh
+export TZ="$1"/"$2"
+RR=$(date)
+zenity --info --text="$RR"
