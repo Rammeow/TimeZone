@@ -2,9 +2,25 @@
 #export TZ="$1"/"$2"
 #RR=$(date)
 #zenity --info --text="$RR"
+lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
+if [ $lang -eq 1 ]
+then
+{
+LANG=ta_IN
+Variable1= $(zenity --entry --entry-text="கண்டம் சேர்க்கவும்" --text="கண்டம் சேர்க்கவும்")
+Variable2= $(zenity --entry --entry-text="பகுதி சேர்க்கவும்" --text="பகுதி சேர்க்கவும்")
+export TZ="$Variable1"/"$Variable2"
+Display=$(date)
+zenity --info --text="$Display"
+}
+elif [ $lang -eq 2 ]
+then
+{
+LANG=en_US
 Variable1= $(zenity --entry --entry-text="Enter Continent" --text="Enter Continent")
 Variable2= $(zenity --entry --entry-text="Enter Region" --text="Enter Region")
 export TZ="$Variable1"/"$Variable2"
 Display=$(date)
 zenity --info --text="$Display"
-
+}
+fi
