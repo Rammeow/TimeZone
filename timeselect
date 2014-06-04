@@ -1,7 +1,4 @@
 #!/bin/sh
-#export TZ="$1"/"$2"
-#RR=$(date)
-#zenity --info --text="$RR"
 lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
 if [ $lang -eq 1 ]
 then
