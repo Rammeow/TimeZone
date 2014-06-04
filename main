@@ -1,4 +1,10 @@
 #!/bin/sh
+HOST=localhost
+PORT=4321
+MAIN="nc $HOST $PORT"
+while true
+do
+
 lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
 if [ $lang -eq 1 ]
 then
@@ -20,4 +26,7 @@ export TZ="$Variable1"/"$Variable2"
 Display=$(date)
 zenity --info --text="$Display"
 }
+fi
+else
+exit -1
 fi
