@@ -3,7 +3,7 @@ HOST=localhost
 PORT=4321
 export LANG=en.US.UTF-8
 export LANG=hi_IN.UTF-8
-$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
+lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
 if [ $lang -eq 1 ] 
 then
 {
