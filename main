@@ -3,7 +3,7 @@ HOST=localhost
 PORT=4321
 
 lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
-if [ $lang -eq 1 ]
+if [ $lang -eq 1 ] 
 then
 {
 LANG=ta_IN
