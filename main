@@ -1,8 +1,9 @@
 #!/bin/sh
 HOST=localhost
 PORT=4321
-
-lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
+export LANG=en.US.UTF-8
+export LANG=hi_IN.UTF-8
+$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
 if [ $lang -eq 1 ] 
 then
 {
@@ -18,6 +19,7 @@ zenity --info --text="$Display"
 elif [ $lang -eq 2 ]
 then
 {
+export LANG=en_US.UTF-8
 LANG=en_US
 Variable1= $(zenity --entry --entry-text="Enter Continent" --text="Enter Continent")
 Variable2= $(zenity --entry --entry-text="Enter Region" --text="Enter Region")
@@ -25,7 +27,4 @@ export TZ="$Variable1"/"$Variable2"
 Display=$(date)
 zenity --info --text="$Display"
 }
-fi
-else
-exit -1
 fi
