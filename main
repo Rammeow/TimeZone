@@ -21,8 +21,8 @@ then
 {
 export LANG=en_US.UTF-8
 LANG=en_US
-Variable1= $(zenity --entry --entry-text="Enter Continent" --text="Enter Continent")
-Variable2= $(zenity --entry --entry-text="Enter Region" --text="Enter Region")
+Variable1=$(zenity --entry --entry-text="Enter Continent" --text="Enter Continent")
+Variable2=$(zenity --entry --entry-text="Enter Region" --text="Enter Region")
 export TZ="$Variable1"/"$Variable2"
 Display=$(date)
 zenity --info --text="$Display"
