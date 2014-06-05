@@ -1,5 +1,5 @@
 # default: on
-# description: The calculator server
+# description: The Timezone server
 service main
 {
 flags = REUSE
