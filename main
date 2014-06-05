@@ -7,7 +7,7 @@ export LANG=ta_IN.UTF-8
 
 LANG=en_US
 
-lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
+lang="$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")"
 if [ "$lang" -eq "1" ]
 then
 {
@@ -17,7 +17,6 @@ Variable2=$(zenity --entry --entry-text="type" --text="பகுதி சேர
 Variable3="$Variable1/$Variable2"
 echo $Variable3|nc $HOST $PORT
 export TZ="$Variable1"/"$Variable2"
-date
 Display=$(date)
 zenity --info --text="$Display"
 }
