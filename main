@@ -7,7 +7,7 @@ export LANG=ta_IN.UTF-8
 
 LANG=en_US
 
-lang=$(zenity --entry --entry-text="Enter 1 for Tamil ; 2 for English" --text="Enter preffered language")
+lang=$(zenity --entry --entry-text="தமிழ் 1அழுத்து ; 2 for English" --text="Enter preffered language")
 if [ "$lang" -eq "1" ]
 then
 {
