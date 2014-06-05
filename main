@@ -1,5 +1,5 @@
 #!/bin/sh
-#export LC_ALL=C
+export LC_ALL=C
 HOST=localhost
 PORT=4321
 export LANG=en.US.UTF-8
